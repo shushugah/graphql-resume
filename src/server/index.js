@@ -59,12 +59,16 @@ app.use(
   '/graphql',
   graphqlHTTP({
     schema,
-    graphiql: false
+    graphiql: true
   })
 )
 
 app.use(morgan(isProduction ? 'combined' : 'dev'))
 app.use(express.static(path.resolve(__dirname, '../build')))
 app.use(renderMiddleware)
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'))
+})
 
 app.listen(port, console.log(`Server running on port http://localhost:${port}`))
