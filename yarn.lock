@@ -1666,10 +1666,6 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-curse-words-common@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/curse-words-common/-/curse-words-common-1.1.0.tgz#05dc8e851575cb13965873cf1938e05cfe5a8e02"
-
 d@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"

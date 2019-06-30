@@ -2,8 +2,6 @@
 type Query {
   # My Name
   name: String!
-  # My Age
-  age: String!
   # My Email
   email: String!
   # The company I work for as of now
@@ -12,15 +10,11 @@ type Query {
   twitter: String!
   # My GitHub name
   github: String!
-  # Am I employed?
   employed: Boolean!
   jobs: [Job]
   repos: [Repo]
   talks: [Talk]
   contributors: [Contributor]
   projects: [Project]
-  countries: [String],
-  speakerInfo: SpeakerInfo,
-  # Have fun
-  randomCurseWord: String
+  countries: [String]
 }

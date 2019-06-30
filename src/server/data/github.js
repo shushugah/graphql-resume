@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 export const repos = axios(
-  'https://api.github.com/users/SaraVieira/repos?type=all&per_page=100'
+  'https://api.github.com/users/shushugah/repos?type=all&per_page=100'
 )
   .then(repos =>
     repos.data.map(repo => ({
@@ -18,7 +18,7 @@ export const repos = axios(
   .then(repos => repos.sort((a, b) => b.stars - a.stars))
 
 export const contributors = axios(
-  'https://api.github.com/repos/SaraVieira/graphql-portfolio/contributors'
+  'https://api.github.com/repos/shushugah/graphql-resume/contributors'
 ).then(contributors =>
   contributors.data.map(contributor => ({
     name: contributor.login,

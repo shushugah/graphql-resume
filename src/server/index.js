@@ -11,43 +11,26 @@ import data from './data/main'
 import renderMiddleware from './middleware/render'
 
 // Schemas
-import {
-  Job,
-  Repo,
-  Talk,
-  Query,
-  Contributor,
-  Project,
-  SpeakerInfo,
-  TalkPrepared
-} from './types'
+import { Job, Repo, Talk, Query, Contributor, Project } from './types'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const port = process.env.PORT || 3000
 const app = express()
 
-const typeDefs = Query.concat(
-  Job,
-  Project,
-  Repo,
-  Talk,
-  Contributor,
-  SpeakerInfo,
-  TalkPrepared
-)
+const typeDefs = Query.concat(Job, Project, Repo, Talk, Contributor)
 
 const resolvers = {
   Query: {
     name: () => data.name,
-    age: () => data.age,
     email: () => data.email,
     company: () => data.company,
     twitter: () => data.twitter,
+    wikipedia: () => data.wikipedia,
+    goodreads: () => data.goodreads,
+    currentHome: () => data.currentHome,
     github: () => data.github,
-    employed: () => true,
     jobs: () => data.jobs,
     repos: () => data.repos,
-    randomCurseWord: () => data.randomCurseWord,
     contributors: () => data.contributors,
     countries: () => data.countries,
     talks: () =>
@@ -55,8 +38,7 @@ const resolvers = {
         ...talk,
         date: format(talk.date, 'DD/MM/YY')
       })),
-    projects: () => data.projects,
-    speakerInfo: () => data.speakerInfo
+    projects: () => data.projects
   }
 }
 
@@ -86,4 +68,4 @@ app.use(morgan(isProduction ? 'combined' : 'dev'))
 app.use(express.static(path.resolve(__dirname, '../build')))
 app.use(renderMiddleware)
 
-app.listen(port, console.log(`Server running on port ${port}`))
+app.listen(port, console.log(`Server running on port http://localhost:${port}`))

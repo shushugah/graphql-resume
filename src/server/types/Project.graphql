@@ -1,4 +1,3 @@
-# Dumb and maybe not so dumb Projects/Packages I have done over the years
 type Project {
   # Name
   name: String!

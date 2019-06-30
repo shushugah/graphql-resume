@@ -1,6 +1,0 @@
-type TalksPrepared {
-    # Talk Name
-    name: String,
-    # Talk Description
-    description: String
-}

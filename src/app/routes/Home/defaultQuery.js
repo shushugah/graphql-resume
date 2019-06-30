@@ -1,17 +1,15 @@
 const defaultQuery = `
-  # Yellow
-  # My name is Sara and I am Front End Developer from Portugal
-  # I made this GraphQL API as my page because everyone loves GraphQL
-  # Also it's waaay easier to update like this.
-  # Check out the Docs and here is a sample query
-
+  # My name is Yonatan. I am software engineer, based in Berlin.
+  # Below is a GraphQL search interface to learn more about me
+  # Remove any parameters that are not interesting for you!
   {
     name,
-    age,
     email,
+    currentHome,
     github,
     twitter,
-    employed,
+    wikipedia,
+    goodreads,
     talks,
     projects,
     jobs,
