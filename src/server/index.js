@@ -23,7 +23,6 @@ const resolvers = {
   Query: {
     name: () => data.name,
     email: () => data.email,
-    company: () => data.company,
     twitter: () => data.twitter,
     wikipedia: () => data.wikipedia,
     goodreads: () => data.goodreads,

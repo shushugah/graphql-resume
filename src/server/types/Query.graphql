@@ -1,16 +1,12 @@
 # Fun right!?
 type Query {
-  # My Name
   name: String!
-  # My Email
   email: String!
-  # The company I work for as of now
-  company: String!
-  # My Twitter handler
   twitter: String!
-  # My GitHub name
   github: String!
-  employed: Boolean!
+  wikipedia: String!
+  currentHome: String!
+  goodreads: String!
   jobs: [Job]
   repos: [Repo]
   talks: [Talk]
